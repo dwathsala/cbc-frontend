@@ -5,14 +5,15 @@ import ProductOverview from "./client/productOverview"
 import CartPage from "./client/cart"
 import CheckOutPage from "./client/checkOut"
 import SearchProductPage from "./client/searchProductPage"
+import HomeLandingPage from "./client/homeLandingPage" 
 
 export default function HomePage(){
     return(
       <div className="w-full min-h-screen flex flex-col items-center">
         <Header/>
-        <div className="w-full flex-1 flex flex-col items-center overflow-auto">
+        <div className="w-full h-[calc(100vh-80px)] flex flex-col">
           <Routes path="/*">
-            <Route path="/" element={<h1>Home</h1>} />
+            <Route path="/" element={<HomeLandingPage />} />
             <Route path="/products" element={<ProductPage />} />
             <Route path="/about" element={<h1>About</h1>} />
             <Route path="/contact" element={<h1>Contact</h1>} />
