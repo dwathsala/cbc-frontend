@@ -8,9 +8,9 @@ import SearchProductPage from "./client/searchProductPage"
 
 export default function HomePage(){
     return(
-      <div className="w-full h-screen flex flex-col items-center overflow-hidden">
+      <div className="w-full min-h-screen flex flex-col items-center">
         <Header/>
-        <div className="w-full h-[calc(100vh-80px)] flex flex-col items-center">
+        <div className="w-full flex-1 flex flex-col items-center overflow-auto">
           <Routes path="/*">
             <Route path="/" element={<h1>Home</h1>} />
             <Route path="/products" element={<ProductPage />} />
