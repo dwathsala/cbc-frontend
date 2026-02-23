@@ -11,6 +11,7 @@ export default function HomeLandingPage() {
             }}
         >
             <div className="bg-[#000000020] w-full h-full flex flex-col items-center sm:items-start justify-center px-6 sm:px-10 md:px-16 lg:px-20">
+                <h1 className="text-pink-900 text-1xl sm:text-2xl md:text-3xl lg:text-4xl font-bold italic mb-4">Dula Cosmetics, </h1>
                 <h1 className="text-pink-800 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4">Welcome to Our Store</h1>
                 <p className="text-pink-900 text-m sm:text-lg md:text-lg lg:text-2xl mb-6 md:mb-8">Discover the best products just for you</p>
                 <Link 
