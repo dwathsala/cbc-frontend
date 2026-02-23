@@ -23,8 +23,8 @@ export default function Header(){
             }} src="/logo.png" alt="Logo" className="w-[80px] h-[80px] object-cover cursor-pointer" />
             <div className="w-[calc(100%-16px)] h-full hidden md:flex justify-center items-center" >
                 <Link to="/" className="text-[20px] font-bold mx-2">Home</Link>
-                <Link to="/products" className="text-[20px] font-bold mx-2">Products</Link>
                 <Link to="/about" className="text-[20px] font-bold mx-2">About</Link>
+                <Link to="/products" className="text-[20px] font-bold mx-2">Products</Link>
                 <Link to="/contact" className="text-[20px] font-bold mx-2">Contact</Link>
                 <Link to="/search" className="text-[20px] font-bold mx-2">Search</Link>
 

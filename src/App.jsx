@@ -11,7 +11,6 @@ import RegisterPage from './pages/register'
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import ForgetPasswordPage from './pages/forgetPassword'
 
-
 function App() { //full app ------> App()
 
   return ( 
