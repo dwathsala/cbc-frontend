@@ -1,6 +1,6 @@
 import UserData from "./userData";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
@@ -8,7 +8,10 @@ import { useState } from "react";
 export default function Header(){
     const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
     const token = localStorage.getItem("token"); 
+
+    const isActive = (path) => location.pathname === path;
 
     console.log("Header component loading....")
     return(
@@ -20,7 +23,7 @@ export default function Header(){
             }/>
             <img onClick={()=>{
                 navigate("/")
-            }} src="/logo.png" alt="Logo" className="w-[80px] h-[80px] object-cover cursor-pointer" />
+            }} src="/logo.png" alt="Logo" className="w-[80px] h-[80px] object-cover cursor-pointer ml-10" />
             <div className="w-[calc(100%-16px)] h-full hidden md:flex justify-center items-center" >
                 <Link to="/" className="text-[20px] font-bold mx-2">Home</Link>
                 <Link to="/about" className="text-[20px] font-bold mx-2">About</Link>
@@ -33,7 +36,7 @@ export default function Header(){
             <div className="w-[160px] hidden md:flex justify-center items-center">
                 {
                      token==null ?
-                    <Link to="/login" className="text-[20px] font-bold mx-2">Login</Link>
+                    <Link to="/login" className="text-[25px] font-bold mx-2 text-accent">Login</Link>
                     :
                     <button className="text-[20px] font-bold " onClick={()=>{
                         localStorage.removeItem("token");
@@ -43,7 +46,7 @@ export default function Header(){
                     }}>
                         Logout</button>
                 }
-                <Link to="/cart" className="text-[50px] font-bold mr-50">
+                <Link to="/cart" className="text-[50px] font-bold mr-50 ml-10">
                     <BsCart3 />
                 </Link>
             </div>
