@@ -25,11 +25,11 @@ export default function Header(){
                 navigate("/")
             }} src="/logo.png" alt="Logo" className="w-[80px] h-[80px] object-cover cursor-pointer ml-10" />
             <div className="w-[calc(100%-16px)] h-full hidden md:flex justify-center items-center" >
-                <Link to="/" className="text-[20px] font-bold mx-2">Home</Link>
-                <Link to="/about" className="text-[20px] font-bold mx-2">About</Link>
-                <Link to="/products" className="text-[20px] font-bold mx-2">Products</Link>
-                <Link to="/contact" className="text-[20px] font-bold mx-2">Contact</Link>
-                <Link to="/search" className="text-[20px] font-bold mx-2">Search</Link>
+                <Link to="/" onClick={()=>setSideDrawerOpen(false)} className={`text-[20px] font-bold mx-2 relative px-4 py-2 transition-all duration-200 rounded-full ${isActive("/") ? "bg-[#2d1a45] text-white shadow-lg" : "text-black hover:bg-gray-200"}`}>Home</Link>
+                <Link to="/about" onClick={()=>setSideDrawerOpen(false)} className={`text-[20px] font-bold mx-2 relative px-4 py-2 transition-all duration-200 rounded-full ${isActive("/about") ? "bg-[#2d1a45] text-white shadow-lg" : "text-black hover:bg-gray-200"}`}>About</Link>
+                <Link to="/products" onClick={()=>setSideDrawerOpen(false)} className={`text-[20px] font-bold mx-2 relative px-4 py-2 transition-all duration-200 rounded-full ${isActive("/products") ? "bg-[#2d1a45] text-white shadow-lg" : "text-black hover:bg-gray-200"}`}>Products</Link>
+                <Link to="/contact" onClick={()=>setSideDrawerOpen(false)} className={`text-[20px] font-bold mx-2 relative px-4 py-2 transition-all duration-200 rounded-full ${isActive("/contact") ? "bg-[#2d1a45] text-white shadow-lg" : "text-black hover:bg-gray-200"}`}>Contact</Link>
+                <Link to="/search" onClick={()=>setSideDrawerOpen(false)} className={`text-[20px] font-bold mx-2 relative px-4 py-2 transition-all duration-200 rounded-full ${isActive("/search") ? "bg-[#2d1a45] text-white shadow-lg" : "text-black hover:bg-gray-200"}`}>Search</Link>
 
             </div>  
 
